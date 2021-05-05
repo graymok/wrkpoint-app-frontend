@@ -18,7 +18,7 @@ const WorkstyleForm = (props) => {
     }
 
     const registerUser = async () => {
-        let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}users`, {
+        let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/users`, {
             name: props.name,
             email: props.email,
             password: props.password,

@@ -7,7 +7,7 @@ const AllSpaces = () => {
     const [spaces, setSpaces] = useState([])
 
     const getAllSpaces = async () => {
-        let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}spaces/all`)
+        let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/spaces/all`)
         setSpaces(response.data.spaces)
     }
 

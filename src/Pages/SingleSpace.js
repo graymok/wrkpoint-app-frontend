@@ -13,7 +13,7 @@ const SingleSpace = (props) => {
     const [reserved, setReserved] = useState('')
 
     const getSingleSpace = async () => {
-        let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}spaces/detail/${props.id}`)
+        let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/spaces/detail/${props.id}`)
         setSpace(response.data.space)
     }
 
@@ -23,7 +23,7 @@ const SingleSpace = (props) => {
     }, [])
 
     const reserveSpace = async () => {
-        let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}spaces/reserve`, {
+        let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/spaces/reserve`, {
             spaceId: props.id,
             date: date
         }, {
