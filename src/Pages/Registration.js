@@ -17,7 +17,7 @@ const Registration = (props) => {
     }
 
     const loginUser = async () => {
-        let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/users/login`, {
+        let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}users/login`, {
             email: props.email,
             password: props.password
         })

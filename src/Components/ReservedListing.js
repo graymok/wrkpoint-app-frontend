@@ -17,7 +17,7 @@ const ReservedListing = (props) => {
                             <span className="space-listing-date">Reserved for:</span>
                             <span className="space-listing-date">{item.date}</span>
                             <span className="space-listing-delete" onClick={async () => {
-                                let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/spaces/remove`, {
+                                let response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}spaces/remove`, {
                                     spaceId: item.spaceId,
                                     date: item.date
                                 }, {
