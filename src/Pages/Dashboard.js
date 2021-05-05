@@ -12,7 +12,7 @@ const Dashboard = () => {
 
 
     const getAllReservations = async () => {
-        let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/spaces/dashboard`, {
+        let response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}spaces/dashboard`, {
             headers: {
                 Authorization: user.id
             }
