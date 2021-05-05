@@ -23,12 +23,12 @@ const SingleDetail = (props) => {
                     </span>
                     <span className="single-header-space-description">{props.space.description}</span>
                         <form className="single-reservations-form" onSubmit={props.handleReserve}> 
-                            <label htmlFor="date">Reserve this space: </label>
+                            <label htmlFor="date">Select a day to reserve </label>
                             <input type="date" id="date" onChange={(e) => {props.setDate(e.target.value)}}/>
-                            <input className="input-button" type="submit" value="RESERVE" />
+                            <input className="input-button-res" type="submit" value="RESERVE" />
                         </form>
-                        { props.reserved === 'user' && <span className="single-reservations-outcome">You already have this day reserved. Please choose another day.</span> }
-                        { props.reserved === 'failure' && <span className="single-reservations-outcome">Another user has this day reserved. Please choose another day.</span> }
+                        { props.reserved === 'user' && <span className="single-reservations-outcome-fail">You already have this day reserved. Please select another day.</span> }
+                        { props.reserved === 'failure' && <span className="single-reservations-outcome-fail">Another user has this day reserved. Please select another day.</span> }
                         { props.reserved === 'success' && <span className="single-reservations-outcome">Your reservation is complete.</span> }
 
                     

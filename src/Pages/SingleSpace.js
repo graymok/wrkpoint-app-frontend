@@ -7,7 +7,7 @@ const SingleSpace = (props) => {
 
     const [space, setSpace] = useState([])
     const {userState} = useContext(UserContext)
-    const [user, setUser] = userState
+    const [user] = userState
 
     const [date, setDate] = useState()
     const [reserved, setReserved] = useState('')
@@ -19,6 +19,7 @@ const SingleSpace = (props) => {
 
     useEffect(() => {
         getSingleSpace()
+    // eslint-disable-next-line react-hooks/exhaustive-deps    
     }, [])
 
     const reserveSpace = async () => {

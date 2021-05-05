@@ -4,7 +4,7 @@ import { useContext } from 'react'
 
 
 
-const NavBar = () => {
+const NavBar = (props) => {
 
     const {userState} = useContext(UserContext)
     const [user, setUser] = userState
@@ -29,6 +29,9 @@ const NavBar = () => {
                             workstyle: '',
                             workstyleDetail: ''                            
                         })
+                        props.setName('')
+                        props.setEmail('')
+                        props.setPassword('')
                     }}>Logout</span>
                     <span className="nav-side-margin"></span>
                 </div>
